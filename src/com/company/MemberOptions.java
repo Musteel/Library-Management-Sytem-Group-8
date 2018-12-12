@@ -29,6 +29,7 @@ public class MemberOptions {
                     viewMemberDetails();
                     break;
                 case 4:
+                    System.out.println("Thank you for using this program");
                     System.exit(0);
                 default:
                     System.out.println("Invalid input");

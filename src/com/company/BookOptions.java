@@ -46,6 +46,7 @@ public class BookOptions {
                     viewCompleteIssueDetails();
                     break;
                 case 6:
+                    System.out.println("Thank you for using this program");
                     System.exit(0);
                 default:
                     System.out.println("Invalid input");
