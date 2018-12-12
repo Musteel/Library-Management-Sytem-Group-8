@@ -22,7 +22,7 @@ public class BookOptions {
         System.out.println("[1] Add Book");
         System.out.println("[2] Issue a Book");
         System.out.println("[3] Return a Book");
-        System.out.println("[4] View the Book details");
+        System.out.println("[4] View Book details");
         System.out.println("[5] View complete Issue details");
         System.out.println("[6] Exit");
         System.out.print("Enter: ");
