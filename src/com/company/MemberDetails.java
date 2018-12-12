@@ -10,11 +10,11 @@ public class MemberDetails {
         this.memberName = memberName;
     }
 
-    public int getmemberId() {
+    public int getMemberId() {
         return memberId;
     }
 
-    public void setmemberId(int memberId) {
+    public void setMemberId(int memberId) {
         this.memberId = memberId;
     }
 

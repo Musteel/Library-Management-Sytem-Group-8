@@ -53,7 +53,7 @@ public class BookOptions {
             }
             c = new Scanner(System.in);
             choice = c.nextInt();
-        } while (choice > 0 && choice < 6);
+        } while (choice != 6);
     }
 
     private static void viewCompleteIssueDetails() {
@@ -124,7 +124,7 @@ public class BookOptions {
     private static void issueBook() {
         System.out.println("Enter Member Id,Book Number, Name and Price");
         Scanner c = new Scanner(System.in);
-        int studentId = c.nextInt();
+        int memberId = c.nextInt();
         Scanner c1 = new Scanner(System.in);
         int bookNumber = c1.nextInt();
         Scanner c2 = new Scanner(System.in);
@@ -150,7 +150,7 @@ public class BookOptions {
         }
 
 
-        List<BookIssueDetails> list = hm.get(studentId);
+        List<BookIssueDetails> list = hm.get(memberId);
         for (BookIssueDetails b : list) {
             int value = b.getNoOfBookIssued();
             newIssuedBook.setNoOfBookIssued(++value);
@@ -158,7 +158,7 @@ public class BookOptions {
             if (value > 2)
                 System.out.println("You already issued max(2) books");
             else
-                hm.put(studentId, l);
+                hm.put(memberId, l);
         }
     }
 
