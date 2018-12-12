@@ -25,7 +25,7 @@ public class BookOptions {
         System.out.println("[4] View Book details");
         System.out.println("[5] View complete Issue details");
         System.out.println("[6] Exit");
-        System.out.print("Enter: ");
+        System.out.println("Enter: ");
         Scanner c = new Scanner(System.in);
         int choice = c.nextInt();
         do {

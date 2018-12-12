@@ -14,7 +14,7 @@ public class MemberOptions {
         System.out.println("[2] Delete Member");
         System.out.println("[3] View Member details");
         System.out.println("[4] Exit");
-        System.out.print("Enter: ");
+        System.out.println("Enter: ");
         Scanner c = new Scanner(System.in);
         int choice = c.nextInt();
         do {
