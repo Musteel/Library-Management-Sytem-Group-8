@@ -54,7 +54,7 @@ public class BookOptions {
             }
             c = new Scanner(System.in);
             choice = c.nextInt();
-        } while (choice != 6);
+        } while (choice > 0 && choice < 6);
     }
 
     private static void viewCompleteIssueDetails() {

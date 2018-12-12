@@ -37,7 +37,7 @@ public class MemberOptions {
             }
             c = new Scanner(System.in);
             choice = c.nextInt();
-        } while (choice != 4);
+        } while (choice > 0 && choice < 4);
     }
 
     private static void addMember() {
