@@ -17,44 +17,48 @@ public class BookOptions {
 
 
     public static void menu() {
-
-        addIssueDetails();
-        System.out.println("[1] Add Book");
-        System.out.println("[2] Issue a Book");
-        System.out.println("[3] Return a Book");
-        System.out.println("[4] View Book details");
-        System.out.println("[5] View complete Issue details");
-        System.out.println("[6] Exit");
-        System.out.println("Enter: ");
-        Scanner c = new Scanner(System.in);
-        int choice = c.nextInt();
+        int choice;
         do {
-            switch (choice) {
+
+            addIssueDetails();
+            System.out.println("[1] Add Book");
+            System.out.println("[2] Delete Book");
+            System.out.println("[3] Issue a Book");
+            System.out.println("[4] Return a Book");
+            System.out.println("[5] View Book details");
+            System.out.println("[6] View Complete Issued Book details");
+            System.out.println("[7] Back");
+            System.out.println("Enter: ");
+            Scanner c = new Scanner(System.in);
+
+            switch (choice = c.nextInt()) {
                 case 1:
                     addBook();
                     break;
                 case 2:
-                    issueBook();
+                    deleteBook();
                     break;
                 case 3:
-                    returnBook();
+                    issueBook();
                     break;
                 case 4:
-                    viewBookDetails();
+                    returnBook();
                     break;
                 case 5:
-                    viewCompleteIssueDetails();
+                    viewBookDetails();
                     break;
                 case 6:
-                    System.out.println("Thank you for using this program");
-                    System.exit(0);
+                    viewCompleteIssueDetails();
+                    break;
+                case 7:
+                    Librarian.menu();
+                    break;
                 default:
                     System.out.println("Invalid input");
                     break;
             }
-            c = new Scanner(System.in);
-            choice = c.nextInt();
-        } while (choice > 0 && choice < 6);
+
+        } while (choice > 0 && choice < 7);
     }
 
     private static void viewCompleteIssueDetails() {
@@ -71,7 +75,7 @@ public class BookOptions {
 
     private static void viewBookDetails() {
         for (BookDetails b : books) {
-            System.out.print(b.getBookNumber() + "  " + b.getBookName() + "  "
+            System.out.println(b.getBookNumber() + "  " + b.getBookName() + "  "
                     + b.getCount() + "  " + b.getPrice());
         }
     }
@@ -168,9 +172,24 @@ public class BookOptions {
         Scanner c = new Scanner(System.in);
         int bookNumber = c.nextInt();
         String name = c.nextLine();
+        int count = c.nextInt();
         Double price = c.nextDouble();
 
-        BookDetails book = new BookDetails(bookNumber, name, price);
+        BookDetails book = new BookDetails(bookNumber, name, count, price);
         books.add(book);
     }
+
+    private static void deleteBook() {
+        System.out.println("Enter Book Number");
+        Scanner c = new Scanner(System.in);
+        int bookNumber = c.nextInt();
+
+        for (BookDetails b : books) {
+            if (b.getBookNumber() == bookNumber) {
+                books.remove(b);
+            }
+        }
+    }
+
+
 }

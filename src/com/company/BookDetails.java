@@ -7,9 +7,10 @@ public class BookDetails {
     private Double price;
     private int count;
 
-    public BookDetails(int bookNumber, String name, Double price) {
+    public BookDetails(int bookNumber, String name, int count, Double price) {
         this.bookNumber = bookNumber;
         this.bookName = name;
+        this.count = count;
         this.price = price;
     }
 

@@ -8,16 +8,18 @@ public class MemberOptions {
     static Map<Integer, ArrayList<MemberDetails>> hm = new HashMap<>();
 
     public static void menu() {
-
-        addMemberDetails();
-        System.out.println("[1] Add Member");
-        System.out.println("[2] Delete Member");
-        System.out.println("[3] View Member details");
-        System.out.println("[4] Exit");
-        System.out.println("Enter: ");
-        Scanner c = new Scanner(System.in);
-        int choice = c.nextInt();
+        int choice;
         do {
+
+            addMemberDetails();
+            System.out.println("[1] Add Member");
+            System.out.println("[2] Delete Member");
+            System.out.println("[3] View Member details");
+            System.out.println("[4] Back");
+            System.out.println("Enter: ");
+            Scanner c = new Scanner(System.in);
+            choice = c.nextInt();
+
             switch (choice) {
                 case 1:
                     addMember();
@@ -29,14 +31,13 @@ public class MemberOptions {
                     viewMemberDetails();
                     break;
                 case 4:
-                    System.out.println("Thank you for using this program");
-                    System.exit(0);
+                    Librarian.menu();
+                    break;
                 default:
                     System.out.println("Invalid input");
                     break;
             }
-            c = new Scanner(System.in);
-            choice = c.nextInt();
+
         } while (choice > 0 && choice < 4);
     }
 
@@ -50,10 +51,6 @@ public class MemberOptions {
         members.add(member);
     }
 
-    private static void deleteMember() {
-
-    }
-
     private static void viewMemberDetails() {
         for (MemberDetails b : members) {
             System.out.print(b.getMemberId() + "  " + b.getMemberName() );
@@ -61,10 +58,10 @@ public class MemberOptions {
     }
 
     private static void addMemberDetails() {
-        MemberDetails md1 = new MemberDetails(12, "abc");
-        MemberDetails md2 = new MemberDetails(24, "xyz");
-        MemberDetails md3 = new MemberDetails(36, "mn");
-        MemberDetails md4 = new MemberDetails(48, "u");
+        MemberDetails md1 = new MemberDetails(12, "Kim");
+        MemberDetails md2 = new MemberDetails(24, "John");
+        MemberDetails md3 = new MemberDetails(36, "Patrick");
+        MemberDetails md4 = new MemberDetails(48, "Helen");
         ArrayList<MemberDetails> list1 = new ArrayList<>();
         ArrayList<MemberDetails> list2 = new ArrayList<>();
         ArrayList<MemberDetails> list3 = new ArrayList<>();
@@ -79,5 +76,17 @@ public class MemberOptions {
         hm.put(13, list3);
         hm.put(14, list4);
 
+    }
+
+    private static void deleteMember() {
+        System.out.println("Enter Member Id");
+        Scanner c = new Scanner(System.in);
+        int bookNumber = c.nextInt();
+
+        for (MemberDetails b : members) {
+            if (b.getMemberId() == bookNumber) {
+                members.remove(b);
+            }
+        }
     }
 }
