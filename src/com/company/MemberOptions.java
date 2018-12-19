@@ -18,6 +18,8 @@ public class MemberOptions {
             System.out.println("[3] View Member details");
             System.out.println("[4] Back");
             System.out.println("Enter: ");
+            System.out.println("----------------------");
+
             Scanner c = new Scanner(System.in);
             choice = c.nextInt();
 
