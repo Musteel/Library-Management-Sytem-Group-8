@@ -10,6 +10,7 @@ public class Librarian {
 
         int selectionLib;
         do {
+            System.out.println(" ");
             System.out.println("[1] Book Options ");
             System.out.println("[2] Member Options ");
             System.out.println("[3] Exit ");

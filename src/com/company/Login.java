@@ -13,6 +13,7 @@ public class Login {
 
         int selection;
         do {
+            System.out.println(" ");
             System.out.println("[1] Librarian ");
             System.out.println("[2] Member ");
             System.out.println("[3] Exit ");

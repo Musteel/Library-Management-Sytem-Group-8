@@ -12,6 +12,7 @@ public class MemberOptions {
         do {
 
             addMemberDetails();
+            System.out.println(" ");
             System.out.println("[1] Add Member");
             System.out.println("[2] Delete Member");
             System.out.println("[3] View Member details");
