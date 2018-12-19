@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1084ebd0-825d-472b-bfa9-bb5a64b7e021" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/BookDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/BookDetails.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/BookOptions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/BookOptions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/MemberOptions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/MemberOptions.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,7 +48,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="5" />
-          <entry key="java" value="4193" />
+          <entry key="java" value="4237" />
           <entry key="js" value="22" />
           <entry key="sql" value="77" />
           <entry key="txt" value="28" />
@@ -58,7 +56,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="4193" />
+          <entry key="JAVA" value="4237" />
           <entry key="JavaScript" value="22" />
           <entry key="PLAIN_TEXT" value="33" />
           <entry key="SQL" value="77" />
@@ -147,7 +145,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Member.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
@@ -159,17 +157,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/MemberOptions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
+            <state relative-caret-position="187">
               <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/BookOptions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="591">
-              <caret line="181" column="8" selection-start-line="181" selection-start-column="4" selection-end-line="191" selection-end-column="5" />
+            <state relative-caret-position="578">
+              <caret line="139" column="27" selection-start-line="139" selection-start-column="27" selection-end-line="139" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -217,8 +215,8 @@
         <option value="$PROJECT_DIR$/src/com/company/BookIssueDetails.java" />
         <option value="$PROJECT_DIR$/src/com/company/MemberDetails.java" />
         <option value="$PROJECT_DIR$/src/com/company/BookDetails.java" />
-        <option value="$PROJECT_DIR$/src/com/company/BookOptions.java" />
         <option value="$PROJECT_DIR$/src/com/company/MemberOptions.java" />
+        <option value="$PROJECT_DIR$/src/com/company/BookOptions.java" />
       </list>
     </option>
   </component>
@@ -295,7 +293,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545232809267" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545233447367" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Arquillian JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
     <property name="create.test.in.the.same.root" value="true" />
@@ -373,7 +371,7 @@
       <workItem from="1544526974170" duration="2755000" />
       <workItem from="1544537269740" duration="3743000" />
       <workItem from="1544614774114" duration="12415000" />
-      <workItem from="1545231728053" duration="1077000" />
+      <workItem from="1545231728053" duration="1690000" />
     </task>
     <task id="LOCAL-00001" summary="Books and simple menu">
       <created>1544043342513</created>
@@ -473,11 +471,18 @@
       <option name="project" value="LOCAL" />
       <updated>1544624904026</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Books and simple menu">
+      <created>1545232872628</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1545232872628</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49816000" />
+    <option name="totallyTimeSpent" value="50429000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -722,23 +727,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/BookOptions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="591">
-          <caret line="181" column="8" selection-start-line="181" selection-start-column="4" selection-end-line="191" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/MemberOptions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/BookDetails.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -779,6 +767,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/MemberOptions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/BookOptions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="139" column="27" selection-start-line="139" selection-start-column="27" selection-end-line="139" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

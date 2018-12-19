@@ -81,9 +81,10 @@ public class BookOptions {
     }
 
     private static void returnBook() {
-        System.out.println("Enter Member Id & Book Id");
+        System.out.println("Enter Member Id");
         Scanner c = new Scanner(System.in);
         int id = c.nextInt();
+        System.out.println("Enter Book Id");
         int bookNumber = c.nextInt();
         List<BookIssueDetails> bd = hm.get(id);
         for (BookIssueDetails b : bd) {
@@ -127,13 +128,16 @@ public class BookOptions {
     }
 
     private static void issueBook() {
-        System.out.println("Enter Member Id,Book Number, Name and Price");
+        System.out.println("Enter Member Id");
         Scanner c = new Scanner(System.in);
         int memberId = c.nextInt();
+        System.out.println("Enter Book Number");
         Scanner c1 = new Scanner(System.in);
         int bookNumber = c1.nextInt();
+        System.out.println("Enter Name");
         Scanner c2 = new Scanner(System.in);
         String name = c2.nextLine();
+        System.out.println("Enter Price");
         Scanner c3 = new Scanner(System.in);
         String issueDate = c3.nextLine();
         BookIssueDetails newIssuedBook = new BookIssueDetails();
@@ -168,10 +172,12 @@ public class BookOptions {
     }
 
     private static void addBook() {
-        System.out.println("Enter Book Number, Name and Price");
+        System.out.println("Enter Book Number");
         Scanner c = new Scanner(System.in);
         int bookNumber = c.nextInt();
+        System.out.println("Enter Name");
         String name = c.nextLine();
+        System.out.println("Enter Price");
         int count = c.nextInt();
         Double price = c.nextDouble();
 
