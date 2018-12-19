@@ -21,6 +21,7 @@ public class BookOptions {
         do {
 
             addIssueDetails();
+            System.out.println(" ");
             System.out.println("[1] Add Book");
             System.out.println("[2] Delete Book");
             System.out.println("[3] Issue a Book");
@@ -177,8 +178,9 @@ public class BookOptions {
         int bookNumber = c.nextInt();
         System.out.println("Enter Name");
         String name = c.nextLine();
-        System.out.println("Enter Price");
+        System.out.println("Enter Count");
         int count = c.nextInt();
+        System.out.println("Enter Price");
         Double price = c.nextDouble();
 
         BookDetails book = new BookDetails(bookNumber, name, count, price);
