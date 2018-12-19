@@ -42,9 +42,10 @@ public class MemberOptions {
     }
 
     private static void addMember() {
-        System.out.println("Enter Member Id and Name");
+        System.out.println("Enter Member Id");
         Scanner c = new Scanner(System.in);
         int memberId = c.nextInt();
+        System.out.println("Enter Name");
         String name = c.nextLine();
 
         MemberDetails member = new MemberDetails(memberId, name);
