@@ -29,8 +29,8 @@ public class BookOptions {
             System.out.println("[5] View Book details");
             System.out.println("[6] View Complete Issued Book details");
             System.out.println("[7] Back");
-            System.out.println("Enter: ");
             System.out.println("----------------------");
+            System.out.println("Enter: ");
 
             Scanner c = new Scanner(System.in);
 
