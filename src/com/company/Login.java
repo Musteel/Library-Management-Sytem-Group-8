@@ -18,7 +18,7 @@ public class Login {
             System.out.println("[2] Member ");
             System.out.println("[3] Exit ");
             System.out.println("----------------------");
-            System.out.print("Enter: ");
+            System.out.println("Enter: ");
 
             switch (selection = input.nextInt()) {
                 case 1:

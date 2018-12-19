@@ -15,7 +15,7 @@ public class Librarian {
             System.out.println("[2] Member Options ");
             System.out.println("[3] Exit ");
             System.out.println("----------------------");
-            System.out.print("Enter: ");
+            System.out.println("Enter: ");
 
             switch (selectionLib = input.nextInt()) {
                 case 1:
