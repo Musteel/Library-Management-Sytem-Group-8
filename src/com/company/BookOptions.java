@@ -140,7 +140,7 @@ public class BookOptions {
         System.out.println("Enter Name");
         Scanner c2 = new Scanner(System.in);
         String name = c2.nextLine();
-        System.out.println("Enter Price");
+        System.out.println("Enter Date");
         Scanner c3 = new Scanner(System.in);
         String issueDate = c3.nextLine();
         BookIssueDetails newIssuedBook = new BookIssueDetails();
@@ -150,7 +150,7 @@ public class BookOptions {
         ArrayList<BookIssueDetails> l = new ArrayList<>();
 
 
-        SimpleDateFormat formatter = new SimpleDateFormat("dd-MMM-yyyy");
+        SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
 
         try {
 
@@ -176,14 +176,17 @@ public class BookOptions {
 
     private static void addBook() {
         System.out.println("Enter Book Number");
-        Scanner c = new Scanner(System.in);
-        int bookNumber = c.nextInt();
+        Scanner c1 = new Scanner(System.in);
+        int bookNumber = c1.nextInt();
         System.out.println("Enter Name");
-        String name = c.nextLine();
+        Scanner c2 = new Scanner(System.in);
+        String name = c2.nextLine();
         System.out.println("Enter Count");
-        int count = c.nextInt();
+        Scanner c3 = new Scanner(System.in);
+        int count = c3.nextInt();
         System.out.println("Enter Price");
-        Double price = c.nextDouble();
+        Scanner c4 = new Scanner(System.in);
+        Double price = c4.nextDouble();
 
         BookDetails book = new BookDetails(bookNumber, name, count, price);
         books.add(book);
