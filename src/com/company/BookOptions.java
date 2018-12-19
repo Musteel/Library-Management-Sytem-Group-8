@@ -150,7 +150,7 @@ public class BookOptions {
         ArrayList<BookIssueDetails> l = new ArrayList<>();
 
 
-        SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
+        SimpleDateFormat formatter = new SimpleDateFormat("dd-MMM-yyyy");
 
         try {
 
