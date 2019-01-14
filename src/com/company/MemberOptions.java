@@ -1,17 +1,24 @@
 package com.company;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Scanner;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 public class MemberOptions {
 
-    static List<MemberDetails> members = new ArrayList<>();
+    static List<MemberDetails> members = new CopyOnWriteArrayList<>();
     static Map<Integer, ArrayList<MemberDetails>> hm = new HashMap<>();
 
     public static void menu() {
         int choice;
-        do {
 
             addMemberDetails();
+        do {
+
+
             System.out.println(" ");
             System.out.println("[1] Add Member");
             System.out.println("[2] Delete Member");
@@ -49,15 +56,18 @@ public class MemberOptions {
         Scanner c = new Scanner(System.in);
         int memberId = c.nextInt();
         System.out.println("Enter Name");
-        String name = c.nextLine();
+        Scanner c1 = new Scanner(System.in);
+        String name = c1.nextLine();
 
         MemberDetails member = new MemberDetails(memberId, name);
         members.add(member);
     }
 
     private static void viewMemberDetails() {
-        for (MemberDetails b : members) {
-            System.out.print(b.getMemberId() + "  " + b.getMemberName() );
+
+            for (MemberDetails member : members) {
+                System.out.println(member.getMemberId() + "  " + member.getMemberName());
+
         }
     }
 
@@ -85,11 +95,11 @@ public class MemberOptions {
     private static void deleteMember() {
         System.out.println("Enter Member Id");
         Scanner c = new Scanner(System.in);
-        int bookNumber = c.nextInt();
+        int MemberId = c.nextInt();
 
-        for (MemberDetails b : members) {
-            if (b.getMemberId() == bookNumber) {
-                members.remove(b);
+        for (MemberDetails member : members) {
+            if (member.getMemberId() == MemberId) {
+                members.remove(member);
             }
         }
     }

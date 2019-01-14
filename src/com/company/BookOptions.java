@@ -1,33 +1,33 @@
 package com.company;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
-
+import java.util.concurrent.CopyOnWriteArrayList;
 
 public class BookOptions {
 
-    static List<BookDetails> books = new ArrayList<>();
+    static List<BookDetails> books = new CopyOnWriteArrayList<>();
     static Map<Integer, ArrayList<BookIssueDetails>> hm = new HashMap<>();
 
 
     public static void menu() {
         int choice;
-        do {
 
             addIssueDetails();
+        do {
+
+
             System.out.println(" ");
             System.out.println("[1] Add Book");
             System.out.println("[2] Delete Book");
             System.out.println("[3] Issue a Book");
             System.out.println("[4] Return a Book");
             System.out.println("[5] View Book details");
-            System.out.println("[6] View Complete Issued Book details");
+            System.out.println("[6] View Issued Book details");
             System.out.println("[7] Back");
             System.out.println("----------------------");
             System.out.println("Enter: ");
@@ -76,8 +76,9 @@ public class BookOptions {
         }
     }
 
-    private static void viewBookDetails() {
+    protected static void viewBookDetails() {
         for (BookDetails b : books) {
+            System.out.println("------------------------------------");
             System.out.println(b.getBookNumber() + "  " + b.getBookName() + "  "
                     + b.getCount() + "  " + b.getPrice());
         }
@@ -87,8 +88,9 @@ public class BookOptions {
         System.out.println("Enter Member Id");
         Scanner c = new Scanner(System.in);
         int id = c.nextInt();
-        System.out.println("Enter Book Id");
-        int bookNumber = c.nextInt();
+        System.out.println("Enter Book Number");
+        Scanner c1 = new Scanner(System.in);
+        int bookNumber = c1.nextInt();
         List<BookIssueDetails> bd = hm.get(id);
         for (BookIssueDetails b : bd) {
             if (b.getBookNumber() == bookNumber) {
@@ -130,7 +132,7 @@ public class BookOptions {
 
     }
 
-    private static void issueBook() {
+    static void issueBook() {
         System.out.println("Enter Member Id");
         Scanner c = new Scanner(System.in);
         int memberId = c.nextInt();
@@ -140,26 +142,14 @@ public class BookOptions {
         System.out.println("Enter Name");
         Scanner c2 = new Scanner(System.in);
         String name = c2.nextLine();
-        System.out.println("Enter Date");
-        Scanner c3 = new Scanner(System.in);
-        String issueDate = c3.nextLine();
+        Date issueDate = new Date();
+
         BookIssueDetails newIssuedBook = new BookIssueDetails();
         newIssuedBook.setName(name);
         newIssuedBook.setBookNumber(bookNumber);
+        newIssuedBook.setIssueDate(issueDate);
 
         ArrayList<BookIssueDetails> l = new ArrayList<>();
-
-
-        SimpleDateFormat formatter = new SimpleDateFormat("dd-MMM-yyyy");
-
-        try {
-
-            Date date = formatter.parse(issueDate);
-            newIssuedBook.setIssueDate(date);
-
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
 
 
         List<BookIssueDetails> list = hm.get(memberId);
@@ -197,12 +187,9 @@ public class BookOptions {
         Scanner c = new Scanner(System.in);
         int bookNumber = c.nextInt();
 
-        for (BookDetails b : books) {
-            if (b.getBookNumber() == bookNumber) {
-                books.remove(b);
+        for (BookDetails book : books)
+            if (book.getBookNumber() == bookNumber) {
+                books.remove(book);
             }
-        }
     }
-
-
 }

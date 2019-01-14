@@ -7,12 +7,13 @@ public class Login {
     public static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
-        System.out.println("-----Library Management System-----");
-        System.out.println("-----------------------------------");
-        System.out.println("Choose your occupation");
+
 
         int selection;
         do {
+            System.out.println("-----Library Management System-----");
+            System.out.println("-----------------------------------");
+            System.out.println("Choose your occupation");
             System.out.println(" ");
             System.out.println("[1] Librarian ");
             System.out.println("[2] Member ");
