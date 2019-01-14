@@ -11,18 +11,18 @@ public class Librarian {
         int selectionLib;
         do {
             System.out.println(" ");
-            System.out.println("[1] Book Options ");
-            System.out.println("[2] Member Options ");
+            System.out.println("[1] Member Options ");
+            System.out.println("[2] Book Options ");
             System.out.println("[3] Exit ");
             System.out.println("----------------------");
             System.out.println("Enter: ");
 
             switch (selectionLib = input.nextInt()) {
                 case 1:
-                    BookOptions.menu();
+                    MemberOptions.menu();
                     break;
                 case 2:
-                    MemberOptions.menu();
+                    BookOptions.menu();
                     break;
                 case 3:
                     System.out.println("Thank you for using this program");
