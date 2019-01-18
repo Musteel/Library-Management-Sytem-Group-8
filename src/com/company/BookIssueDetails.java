@@ -11,10 +11,10 @@ public class BookIssueDetails {
     private Date issueDate;
     private Date returnDate;
 
-    public BookIssueDetails(int bookNumber, String name, int n, Date issueDate) {
+    public BookIssueDetails(int bookNumber, String name, int no, Date issueDate) {
         this.bookNumber = bookNumber;
         this.name = name;
-        this.noOfBookIssued = n;
+        this.noOfBookIssued = no;
         this.issueDate = issueDate;
     }
 

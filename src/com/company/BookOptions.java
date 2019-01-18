@@ -11,7 +11,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 public class BookOptions {
 
     static List<BookDetails> books = new CopyOnWriteArrayList<>();
-    static Map<Integer, ArrayList<BookIssueDetails>> hm = new HashMap<>();
+    static Map<Integer, List<BookIssueDetails>> hm = new HashMap<>();
 
 
     public static void menu() {
@@ -65,13 +65,13 @@ public class BookOptions {
     }
 
     private static void viewCompleteIssueDetails() {
-        for (Map.Entry<Integer, ArrayList<BookIssueDetails>> entry : hm
+        for (Map.Entry<Integer, List<BookIssueDetails>> entry : hm
                 .entrySet()) {
 
             for (BookIssueDetails b : entry.getValue()) {
                 System.out.println(entry.getKey() + "  " + b.getBookNumber()
                         + "  " + b.getName() + "  " + b.getNoOfBookIssued()
-                        + "  " + b.getIssueDate() + "  " + b.getReturnDate());
+                        + "  " + b.getIssueDate());
             }
         }
     }
@@ -147,10 +147,11 @@ public class BookOptions {
         BookIssueDetails newIssuedBook = new BookIssueDetails();
         newIssuedBook.setName(name);
         newIssuedBook.setBookNumber(bookNumber);
+        newIssuedBook.setNoOfBookIssued(0);
         newIssuedBook.setIssueDate(issueDate);
 
-        ArrayList<BookIssueDetails> l = new ArrayList<>();
 
+        CopyOnWriteArrayList<BookIssueDetails> l = new CopyOnWriteArrayList<>();
 
         List<BookIssueDetails> list = hm.get(memberId);
         for (BookIssueDetails b : list) {
